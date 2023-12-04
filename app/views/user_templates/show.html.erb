@@ -5,7 +5,14 @@
   <dd><%= @the_user.id %></dd>
 
   <dt>edit user</dt>
-  <dd>form</dd>
+  <dd>
+  <form action="/update_user/<%= @the_user.username %>" method="post">
+      <label for="updated_username">Username</label>
+      <input id="updated_username" type="text" name="query_username" placeholder="Enter a URL for the image..." value=<%= @the_user.username %>>
+
+      <button>Update user</button>
+    </form>
+    </dd>
 </dl>
 
 <h2>Own photos (<%= @the_user.own_photos %>)</h2>
